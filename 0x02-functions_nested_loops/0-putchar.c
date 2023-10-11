@@ -2,7 +2,7 @@
 
 /**
  * main - print _putchar
- * 
+ * Michael Hlordzi
  * Return: 0
  */
 
