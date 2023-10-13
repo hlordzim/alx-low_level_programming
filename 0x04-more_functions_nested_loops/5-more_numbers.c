@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * more_numbers - to Prints numbers from 0 to 14, ten times.
+ * print_more_numbers - Prints numbers from 0 to 14, ten times.
+ *
+ * _putchar: only three times
  */
 void print_more_numbers(void)
 {
