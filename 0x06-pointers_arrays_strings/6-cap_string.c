@@ -19,9 +19,9 @@ int is_separator(char c)
 	for (i = 0; separators[i] != '\0'; i++)
 	{
 		if (c == separators[i])
-			return 1;
+			return (1);
 	}
-	return 0;
+	return (0);
 }
 
 char *cap_string(char *str)
@@ -30,7 +30,7 @@ char *cap_string(char *str)
 	char *p = str;
 
 	if (str == NULL)
-		return NULL;
+		return (NULL);
 
 	while (*str != '\0')
 	{
@@ -49,5 +49,5 @@ char *cap_string(char *str)
 		}
 		str++;
 	}
-	return p;
+	return (p);
 }
