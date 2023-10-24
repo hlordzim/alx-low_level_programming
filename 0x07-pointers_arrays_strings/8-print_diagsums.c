@@ -18,6 +18,6 @@ void print_diagsums(int *a, int size)
 		sum2 += a[i * size + (size - i - 1)];
 	}
 
-	printf("Main diagonal sum: %d\n", sum1);
-	printf("Other diagonal sum: %d\n", sum2);
+	printf("%ld, %ld\n", (long)sum1, (long)sum2);
 }
+
