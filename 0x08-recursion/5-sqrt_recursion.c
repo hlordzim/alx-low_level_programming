@@ -5,12 +5,12 @@
  * _sqrt_recursion - function that returns the natural
  *  square root of a number.
  *
- * @n: The number for which to calculate the square root.
  * Return: The natural square root of n, or -1
  *  if n has no natural square root.
- * @x: The current guess for the square root.
+ *
+ * @n: The number for which to calculate the square root.
  */
-int _sqrt_recursion(int n, int x)
+int _sqrt_recursion(int n)
 {
 	if (n < 0)
 	{
