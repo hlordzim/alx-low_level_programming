@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * wildcmp - Compares two strings with wildcard support.
+ * wildcmp - Compares two strings with wildcard support using recursion.
  *
  * @s1: The first string to compare.
  * @s2: The second string to compare with wildcard support.
@@ -13,9 +13,9 @@ int wildcmp(char *s1, char *s2)
 {
 	if (*s2 == '*')
 	{
-		while (*(s2 + 1) == '*')
+		if (*(s2 + 1) == '*')
 		{
-			s2++;
+			return (wildcmp(s1, s2 + 1));
 		}
 
 		while (*s1)
@@ -28,12 +28,12 @@ int wildcmp(char *s1, char *s2)
 		}
 		return (wildcmp(s1, s2 + 1));
 	}
+	else if (*s1 == '\0' || *s2 == '\0')
+	{
+		return (*s1 == *s2);
+	}
 	else if (*s1 == *s2 || (*s2 == '?' && *s1 != '\0'))
 	{
-		if (*s1 == '\0' && *s2 == '\0')
-		{
-			return (1);
-		}
 		return (wildcmp(s1 + 1, s2 + 1));
 	}
 	else
@@ -41,4 +41,3 @@ int wildcmp(char *s1, char *s2)
 		return (0);
 	}
 }
-
