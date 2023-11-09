@@ -3,8 +3,8 @@
 #include <ctype.h>
 
 /**
- * is_separator - Check if a character is a word separator
  * cap_string - Capitalize all words in a string.
+ * is_separator: Check if a character is a word separator
  *
  * @c: The character to check
  * @str: The input string
@@ -12,7 +12,11 @@
  *   A pointer to the modified string
  */
 int is_separator(char c)
+char *cap_string(char *)
 {
+	int capitalize = 1;
+	char *p = str;
+
 	char separators[] = " \t\n,;.!?\"(){}";
 	int i;
 
@@ -22,12 +26,6 @@ int is_separator(char c)
 			return (1);
 	}
 	return (0);
-}
-
-char *cap_string(char *str)
-{
-	int capitalize = 1;
-	char *p = str;
 
 	if (str == NULL)
 		return (NULL);
