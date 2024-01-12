@@ -4,8 +4,8 @@
 #include "lists.h"
 
 /*
- * dlistint_len - Length of a doubly linked list
- * @h: pointer to the head of the next node
+ * dlistint_len - Returns the number of elements in a linked list.
+ * @h: pointer to the head of the next node.
  *
  * Return: Always EXIT_SUCCESS.
  */
